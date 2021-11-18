@@ -1,0 +1,212 @@
+<script src="index.js"></script>
+<script>
+let personas = [0]; 
+let Diabetes= [0];
+let Impertencion =[0];
+let Asma =[0];
+let vein =[0];
+let cin =[0];
+let sete =[0];
+
+
+const reservas = {
+    nombre:'',
+    sexo:'',
+    peso:'',
+    edad:'',
+    enfermedad:'',
+}
+
+let QUESO =0;
+let KG = 0;
+let pies =0;
+let final = 0;
+menus();
+
+  function menus() {
+    opcion = parseInt(
+      prompt(
+        "ingresa el numero de la opcion que quieres realizar" +
+          "\n" +
+          "1.- Saber una rutina por mi peso " +
+          "\n" +
+          "2.- Alientación valanceada " +
+          "\n" +
+          "3.-Quiero saber mi peso " +
+          "\n" +
+          "4.-Salir" +
+          "\n" 
+      )
+    );
+
+    switch (opcion) {
+      case 1:
+        rutina();
+        break;
+      case 2:
+        Comida();
+        break;
+      case 3:
+        Mipeso();
+        break;
+      case 4:
+        
+        break;
+      default:
+        break;
+    }
+  }
+  function rutina() {
+    let nRESE = prompt("Personas");
+    for (let i = 1; i <= nRESE; i++) {
+      console.log("Rurina" );
+      let Nombres = prompt("Nombre ");
+      let edads = prompt("Edad");
+      let sexos =prompt("Masculino o femenino");
+      let pesos =prompt("Peso actual");
+      let enfermedads =prompt("Alguna enfermedad en particular como "+"\n" +"diabetes"+"\n" +"Impertencion"+"\n"+"Asma"+"\n"+"ninguna");
+if (enfermedads == "diabetes") {
+
+Diabetes.push("Nombre: "+Nombres+" Edad: "+edads+" Sexo: "+sexos+ "Peso: " +pesos+"Enfermedad"+enfermedads);
+console.log("los ejercicios que debes hacer son los siguietnes"+
+          "\n" +
+          "-15 flexiones " +
+          "\n" +
+          "-15 sentadillas " +
+          "\n" +
+          "-15 Lagartijas  " +
+          "\n" +
+          "-15 abdominales" +
+          "\n" );
+}else{
+
+}
+if (enfermedads == "Impertencion") {
+
+Diabetes.push("Nombre: "+Nombres+" Edad: "+edads+" Sexo: "+sexos+ "Peso: " +pesos+"Enfermedad"+enfermedads);
+console.log("los ejercicios que debes hacer son los siguietnes"+
+          "\n" +
+          "-5 flexiones " +
+          "\n" +
+          "-5 sentadillas " +
+          "\n" +
+          "-5 Lagartijas  " +
+          "\n" +
+          "-5 abdominales" +
+          "\n" );
+}else{
+
+}
+if (enfermedads == "Asma") {
+
+Diabetes.push("Nombre: "+Nombres+" Edad: "+edads+" Sexo: "+sexos+ "Peso: " +pesos+"Enfermedad"+enfermedads);
+console.log("los ejercicios que debes hacer son los siguietnes"+
+          "\n" +
+          "-10 flexiones " +
+          "\n" +
+          "-10 sentadillas " +
+          "\n" +
+          "-10 Lagartijas  " +
+          "\n" +
+          "-10 abdominales" +
+          "\n" );
+}else{
+
+}
+if (enfermedads == "ninguna") {
+
+Diabetes.push("Nombre: "+Nombres+" Edad: "+edads+" Sexo: "+sexos+ "Peso: " +pesos+"Enfermedad"+enfermedads);
+console.log("los ejercicios que debes hacer son los siguietnes"+
+          "\n" +
+          "-30 flexiones " +
+          "\n" +
+          "-30 sentadillas " +
+          "\n" +
+          "-30 Lagartijas  " +
+          "\n" +
+          "-30 abdominales" +
+          "\n" );
+}else{
+
+}
+
+
+    reservas.nombre=Nombres;
+    reservas.sexo= sexos;
+    reservas.peso=pesos;
+    reservas.edad=edads;
+    reservas.enfermedad=enfermedads;    
+    personas.push("Nombre: "+Nombres+" Edad: "+edads+" Sexo: "+sexos+ "Peso: " +pesos+"Enfermedad"+enfermedads);
+    console.log(personas);
+}
+    menus();
+    }
+//
+function Comida() {
+    let nRESE = prompt("Personas");
+    for (let i = 1; i <= nRESE; i++) {
+      console.log("Rurina" );
+      let enfermedads =prompt("Alguna enfermedad en particular como "+"\n" +"25"+"\n" +"50"+"\n"+"75"+"\n");
+if (enfermedads == "25") {
+
+console.log("Deberas comer "+
+          "\n" +
+          "-Licuados " +
+          "\n" +
+          "-Vegetales al menos 2 veces a la semana  " +
+          "\n" +
+          "-Bajar el consumo de azucares y grasas " +
+          "\n" );
+}else{
+
+}
+if (enfermedads == "50") {
+
+    console.log("Debes Comer "+
+          "\n" +
+          "-Aumentar el consumo de agua  " +
+          "\n" +
+          "-Trata de comer pollo en lugar de res y que sea solo 3 veces por semana  " +
+          "\n" +
+          "-Come demasiada verduras como brocoli o ensaladas " +
+          "\n" +
+          "-Reduce el refresco y tomalo solo una vez por semana " +
+          "\n" );
+}else{
+
+}
+if (enfermedads == "75") {
+
+    console.log("Debes comer "+
+          "\n" +
+          "-Sustituye el pollo y la res por pezcado  " +
+          "\n" +
+          "-Elimina el refresco y sustituye por agua simple solamente " +
+          "\n" +
+          "-Comer solamente ensaladas de distintas variedades" +
+          "\n" +
+          "-Come vfrutas moderablemente por la azucar" +
+          "\n" );
+}else{
+
+}
+
+
+   
+    reservas.enfermedad=enfermedads;    
+    personas.push("Enfermedad"+enfermedads);
+    console.log(personas);
+}
+     
+    menus();
+    }
+      
+function Mipeso(){
+  let KG = prompt("Peso ");
+  let pies = prompt("altura ");
+  Queso = parseFloat(KG) / parseFloat(pies);
+  console.log("Tu Masa corporar es: "+Queso);
+  menus();
+  }
+
+</script>
